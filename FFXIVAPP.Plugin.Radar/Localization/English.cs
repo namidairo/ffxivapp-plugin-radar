@@ -45,7 +45,7 @@ namespace FFXIVAPP.Plugin.Radar.Localization
             "White Joker",
             // Heavensward Rank B
             "Alteci",
-            "Gigantopithecus",
+            "False Gigantopithecus",
             "Gnath Cometdrone",
             "Kreutzet",
             "Lycidas",
