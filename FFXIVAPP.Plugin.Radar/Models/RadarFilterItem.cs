@@ -18,6 +18,7 @@
 using System.Text.RegularExpressions;
 using FFXIVAPP.Common.RegularExpressions;
 using FFXIVAPP.Memory.Core.Enums;
+using FFXIVAPP.Memory.Models;
 
 namespace FFXIVAPP.Plugin.Radar.Models
 {
@@ -27,13 +28,13 @@ namespace FFXIVAPP.Plugin.Radar.Models
         {
             Key = key;
             Level = 0;
-            Type = Actor.Type.Unknown;
+            Type = Entity.Type["Unknown"];
             RegEx = new Regex(key, SharedRegEx.DefaultOptions | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
         }
 
         public string Key { get; set; }
         public int Level { get; set; }
-        public Actor.Type Type { get; set; }
+        public int Type { get; set; }
         public Regex RegEx { get; set; }
     }
 }

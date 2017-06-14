@@ -117,27 +117,7 @@ namespace FFXIVAPP.Plugin.Radar.ViewModels
             {
                 radarFilterItem.Level = level;
             }
-            switch (MainView.View.TType.Text)
-            {
-                case "PC":
-                    radarFilterItem.Type = Actor.Type.PC;
-                    break;
-                case "Monster":
-                    radarFilterItem.Type = Actor.Type.Monster;
-                    break;
-                case "NPC":
-                    radarFilterItem.Type = Actor.Type.NPC;
-                    break;
-                case "Aetheryte":
-                    radarFilterItem.Type = Actor.Type.Aetheryte;
-                    break;
-                case "Gathering":
-                    radarFilterItem.Type = Actor.Type.Gathering;
-                    break;
-                case "Minion":
-                    radarFilterItem.Type = Actor.Type.Minion;
-                    break;
-            }
+            radarFilterItem.Type = Entity.Type[MainView.View.TType.Text];
             if (String.IsNullOrWhiteSpace(selectedKey))
             {
                 PluginViewModel.Instance.Filters.Add(radarFilterItem);

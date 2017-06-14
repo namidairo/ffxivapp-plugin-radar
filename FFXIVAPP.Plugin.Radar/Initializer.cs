@@ -83,27 +83,7 @@ namespace FFXIVAPP.Plugin.Radar
                     {
                         Level = level
                     };
-                    switch (xType)
-                    {
-                        case "PC":
-                            radarFilterItem.Type = Actor.Type.PC;
-                            break;
-                        case "Monster":
-                            radarFilterItem.Type = Actor.Type.Monster;
-                            break;
-                        case "NPC":
-                            radarFilterItem.Type = Actor.Type.NPC;
-                            break;
-                        case "Aetheryte":
-                            radarFilterItem.Type = Actor.Type.Aetheryte;
-                            break;
-                        case "Gathering":
-                            radarFilterItem.Type = Actor.Type.Gathering;
-                            break;
-                        case "Minion":
-                            radarFilterItem.Type = Actor.Type.Minion;
-                            break;
-                    }
+                    radarFilterItem.Type = Entity.Type[xType];
                     PluginViewModel.Instance.Filters.Add(radarFilterItem);
                 }
             }

@@ -16,7 +16,9 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 using FFXIVAPP.Memory.Core;
+using FFXIVAPP.Memory.Core.Enums;
 using FFXIVAPP.Plugin.Radar.Models;
 
 namespace FFXIVAPP.Plugin.Radar.Helpers
@@ -45,7 +47,7 @@ namespace FFXIVAPP.Plugin.Radar.Helpers
             foreach (var actorEntity in entities)
             {
                 bool correctMap = ViewModels.XIVInfoViewModel.Instance.CurrentUser.MapIndex == actorEntity.MapIndex;
-                bool isDead = actorEntity.ActionStatus != Memory.Core.Enums.Actor.ActionStatus.Dead;
+                bool isDead = actorEntity.ActionStatus.Equals("Dead");
 
                 if (isDead && correctMap)
                 {

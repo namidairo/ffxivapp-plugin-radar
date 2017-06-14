@@ -90,7 +90,7 @@ namespace FFXIVAPP.Plugin.Radar
                     PluginViewModel.Instance.RankedFilters.Add(new RadarFilterItem(rankedMonster)
                     {
                         Level = 0,
-                        Type = Actor.Type.Monster
+                        Type = Entity.Type["Monster"]
                     });
                 }
                 RaisePropertyChanged();
@@ -122,6 +122,7 @@ namespace FFXIVAPP.Plugin.Radar
             Copyright = AssemblyHelper.Copyright;
             Version = AssemblyHelper.Version.ToString();
             Notice = "";
+            Entity.Initialize(""); //Entity not initialised
         }
 
         public void Dispose(bool isUpdating = false)
