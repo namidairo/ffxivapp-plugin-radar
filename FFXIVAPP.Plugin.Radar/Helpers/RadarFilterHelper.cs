@@ -16,9 +16,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
 using FFXIVAPP.Memory.Core;
-using FFXIVAPP.Memory.Core.Enums;
 using FFXIVAPP.Plugin.Radar.Models;
 
 namespace FFXIVAPP.Plugin.Radar.Helpers
